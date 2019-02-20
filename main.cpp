@@ -6,6 +6,8 @@ using std::endl;
 void sortDescending(int,int,int);
 void swap(int&,int&);
 
+// Prompts user to input three numbers
+// Calls sortDescending() to sort those numbers
 int main()
 {
   int numA, numB, numC;
@@ -14,11 +16,12 @@ int main()
 
   sortDescending(numA, numB, numC);
   
-  cout<<"From greatest to least, they are: ";
-  cout<<numA<<","<<numB<<","<<numC<<endl;
   return 0;
 }
 
+// Compares two numbers at a time
+// Calls swap() accordingly
+// Prints out the numbers in sorted order
 void sortDescending(int first, int second, int third)
 {
   if( first < third )
@@ -33,8 +36,11 @@ void sortDescending(int first, int second, int third)
   {
     swap(second,third);
   }
+  cout<<"From greatest to least, they are: ";
+  cout<<first<<","<<second<<","<<third<<endl;
 }
 
+// Swaps two numbers at a time
 void swap(int &first, int &second)
 {
   int temp = first;
